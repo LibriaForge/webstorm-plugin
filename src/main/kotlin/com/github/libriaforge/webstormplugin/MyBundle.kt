@@ -1,4 +1,4 @@
-package com.github.pfms84.webstormplugin
+package com.github.libriaforge.webstormplugin
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls

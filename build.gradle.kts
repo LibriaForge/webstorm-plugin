@@ -36,7 +36,11 @@ dependencies {
 
     // IntelliJ Platform Gradle Plugin Dependencies Extension - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-dependencies-extension.html
     intellijPlatform {
-        intellijIdea(providers.gradleProperty("platformVersion"))
+//        intellijIdea(providers.gradleProperty("platformVersion"))
+
+        // Target a recent WebStorm version; check jetbrains.com/webstorm/whatsnew for the latest build number
+        webstorm("2025.3")  // Example: Replace with actual version like "2025.3.1"
+        bundledPlugins(listOf("JavaScript"))  // Required for JS/TS support in WebStorm
 
         // Plugin Dependencies. Uses `platformBundledPlugins` property from the gradle.properties file for bundled IntelliJ Platform plugins.
         bundledPlugins(providers.gradleProperty("platformBundledPlugins").map { it.split(',') })

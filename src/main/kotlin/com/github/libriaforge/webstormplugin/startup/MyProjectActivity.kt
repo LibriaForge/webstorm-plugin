@@ -1,4 +1,4 @@
-package com.github.pfms84.webstormplugin.startup
+package com.github.libriaforge.webstormplugin.startup
 
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project

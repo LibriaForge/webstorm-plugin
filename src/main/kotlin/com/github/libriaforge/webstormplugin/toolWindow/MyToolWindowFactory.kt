@@ -1,4 +1,4 @@
-package com.github.pfms84.webstormplugin.toolWindow
+package com.github.libriaforge.webstormplugin.toolWindow
 
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
@@ -8,8 +8,8 @@ import com.intellij.openapi.wm.ToolWindowFactory
 import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPanel
 import com.intellij.ui.content.ContentFactory
-import com.github.pfms84.webstormplugin.MyBundle
-import com.github.pfms84.webstormplugin.services.MyProjectService
+import com.github.libriaforge.webstormplugin.MyBundle
+import com.github.libriaforge.webstormplugin.services.MyProjectService
 import javax.swing.JButton
 
 

@@ -1,9 +1,9 @@
-package com.github.pfms84.webstormplugin.services
+package com.github.libriaforge.webstormplugin.services
 
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project
-import com.github.pfms84.webstormplugin.MyBundle
+import com.github.libriaforge.webstormplugin.MyBundle
 
 @Service(Service.Level.PROJECT)
 class MyProjectService(project: Project) {

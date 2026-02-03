@@ -1,15 +1,37 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.pfms84.webstormplugin</id>
+    <id>com.github.libriaforge.webstormplugin</id>
     <name>webstorm-plugin</name>
-    <vendor>pfms84</vendor>
+    <vendor>LibriaForge</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>JavaScript</depends>
+    <depends>com.intellij.modules.webstorm</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.pfms84.webstormplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="com.github.pfms84.webstormplugin.startup.MyProjectActivity" />
+        <toolWindow factoryClass="com.github.libriaforge.webstormplugin.toolWindow.MyToolWindowFactory"
+                    id="MyToolWindow"/>
+        <postStartupActivity implementation="com.github.libriaforge.webstormplugin.startup.MyProjectActivity"/>
+        <notificationGroup id="TsBarrels" displayType="BALLOON" />
     </extensions>
+
+    <actions>
+        <group id="LibriaForgeMenu"
+               text="LibriaForge"
+               popup="true"
+               description="LibriaForge tools">
+            <action id="com.github.libriaforge.tsbarrels.GenerateBarrelsAction"
+                    class="com.github.libriaforge.tsbarrels.GenerateBarrelsAction"
+                    text="Generate TS Barrels"
+                    description="Generate TypeScript barrel files using @libria/ts-barrels">
+<!--                <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>-->
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt B"/>
+            </action>
+
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last">
+            </add-to-group>
+        </group>
+    </actions>
 </idea-plugin>
